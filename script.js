@@ -10,9 +10,9 @@ let topicExpanded;
 
 topicArray.forEach(topic =>{
     
-    topicExpanded = document.querySelector(".topic-expanded");
     topic.addEventListener("click", ()=>{
         currentTopic=topic;
+        topicExpanded = topic.querySelector(".topic-expanded");
         if (!currentTopic.classList.contains("topic-started") && !currentTopic.classList.contains("topic-finished")) {
             dialogStarted.showModal();
         } else if (currentTopic.classList.contains("topic-started") && !currentTopic.classList.contains("topic-finished")) {
